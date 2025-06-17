@@ -33,10 +33,10 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 ---
 
-## License
+## 🚀License
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
-## About Me
+## 👧About Me
 
-Hello! I am **Arhana Sen Chowdhury**. I am
+Hello! I am **Arhana Sen Chowdhury**. I am an aspiring IT professional with a background in Chemical Engineering and a growing passion for technology and data-driven solutions, eager to apply my cross-disciplinary knowledge and adaptability in a dynamic IT environment.
