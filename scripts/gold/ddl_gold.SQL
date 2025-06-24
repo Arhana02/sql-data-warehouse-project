@@ -29,10 +29,10 @@ SELECT
 	la.cntry                           AS country,
 	ci.cst_marital_status              AS marital_status,
 	CASE 
-      WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr -- CRM is the Master for gender info
-      ELSE COALESCE(ca.gen, 'n/a')
+        WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr -- CRM is the Master for gender info
+        ELSE COALESCE(ca.gen, 'n/a')
 	END                                AS gender,
-  ca.bdate                           AS birth_date,
+        ca.bdate                           AS birth_date,
 	ci.cst_create_date                 AS create_date
 	FROM silver.crm_cust_info AS ci
   LEFT JOIN silver.erp_cust_az12 AS ca
@@ -49,8 +49,8 @@ CREATE VIEW gold.dim_products AS
 SELECT
 	ROW_NUMBER() OVER(ORDER BY pn.prd_start_dt, pn.prd_key) AS product_key, -- Surrogate key
 	pn.prd_id                                               AS product_id,
-  pn.prd_key                                              AS product_number,
-  pn.prd_nm                                               AS product_name,
+        pn.prd_key                                              AS product_number,
+        pn.prd_nm                                               AS product_name,
 	pn.cat_id                                               AS category_id,
 	pc.cat                                                  AS category,
 	pc.subcat                                               AS subcategory,
@@ -71,7 +71,7 @@ DROP VIEW IF EXISTS gold.facts_sales;
 CREATE VIEW gold.fact_sales AS
 SELECT
 	sd.sls_ord_num            AS order_number,
-  pr.product_key            AS product_key,
+        pr.product_key            AS product_key,
 	cu.customer_key           AS customer_key,
 	sd.sls_order_dt           AS order_date,
 	sd.sls_ship_dt            AS shipping_date,
